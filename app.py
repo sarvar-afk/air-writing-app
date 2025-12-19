@@ -159,3 +159,4 @@ async def detect(file: UploadFile = File(...)):
     cv2.putText(frame, gesture, (20, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
     _, img_encoded = cv2.imencode(".jpg", frame)
     return StreamingResponse(io.BytesIO(img_encoded.tobytes()), media_type="image/jpeg")
+# //
